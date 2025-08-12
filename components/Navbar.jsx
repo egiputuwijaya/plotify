@@ -31,7 +31,7 @@ export default function Navbar() {
 
       {/* tampilan mobile */}
       <div className="block md:hidden">
-        <div className="flex flex-row justify-between px-5 py-1">
+        <div className="flex flex-row justify-between px-5 py-4">
           <h1 className="text-black text-xl">Plotify</h1>
           <button onClick={() => setIsOpen(!isOpen)} className="transition">
             {isOpen ? (
