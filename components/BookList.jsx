@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 export default function BookList() {
   const books = [
     { title: "Atomic Habits", cover: "cover1.png", author: "James Clear" },
@@ -24,22 +25,40 @@ export default function BookList() {
   ];
   return (
     <div className="md:py-20 ">
-      <div className="bg-purple-500 py-10 px-1 md:py-20 md:px-6">
-        <div>
+      <div className="bg-purple-500 py-10 px-1 md:py-15 md:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.7 }}
+        >
           <h1 className="text-5xl text-center font-semibold pb-2">
             Discover Your Next Favorite Read
           </h1>
-          <p className="text-xl text-center pb-10">
+          <p className="text-xl text-center pb-10 md:pb-15">
             Explore our curated book picks designed to inspire, entertain, and
             expand your horizon
           </p>
-        </div>
+        </motion.div>
 
         {/* ukuran dekstop  */}
         <div className="hidden md:block">
-          <div className="flex flex-row justify-between px-30">
+          <motion.div
+            initial={{ opacity: 0, y: 70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-row justify-between px-30"
+          >
             {books.map((book, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 1, x: 0 }}
+                whileHover={{ scale: 1.2 }}
+                viewport={{ once: false }}
+                transition={{
+                  duration: 0.7,
+                  ease: [0.25, 0.1, 0.25, 1],
+                }}
                 key={index}
                 className="flex-shrink-0 w-56 shadow-2xl rounded-lg"
                 style={{ backgroundColor: "#FFE3A9" }}
@@ -53,9 +72,9 @@ export default function BookList() {
                   {book.title}
                 </h2>
                 <p className="text-gray-700 text-center">{book.author}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* ukuran mobile */}
@@ -80,6 +99,17 @@ export default function BookList() {
             ))}
           </div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.7 }}
+          className="mt-20"
+        >
+          <h2 className="text-center py-2  bg-purple-700 max-w-40 mx-auto rounded-xl hover:bg-white hover:text-purple-600 transition duration-150">
+            View More
+          </h2>
+        </motion.div>
       </div>
     </div>
   );

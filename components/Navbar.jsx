@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FaTimes, FaBars } from "react-icons/fa";
+import * as motion from "motion/react-client";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState();
@@ -11,8 +12,22 @@ export default function Navbar() {
       {/* tampilan dekstop */}
       <div className="hidden md:block">
         <div className="flex flex-row justify-between py-4 items-center">
-          <h1 className="text-4xl text-black font-semibold">Plotify</h1>
-          <div className="flex flex-row gap-12 text-xl text-gray-500">
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.7 }}
+            className="text-4xl text-black font-semibold"
+          >
+            Plotify
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-row gap-12 text-xl text-gray-500"
+          >
             <Link href="" className="hover:text-purple-500">
               Books
             </Link>
@@ -22,10 +37,16 @@ export default function Navbar() {
             <Link href="" className="hover:text-purple-500">
               About
             </Link>
-          </div>
-          <div className="text-purple-500 text-xl px-4 py-1 rounded-md border-3 border-purple-400 hover:text-white hover:bg-purple-400 transition.">
+          </motion.div>
+          <motion.button
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.7 }}
+            className="text-purple-500 text-xl px-4 py-1 rounded-md border-3 border-purple-400 hover:text-white hover:bg-purple-400 transition."
+          >
             <button>Sign in</button>
-          </div>
+          </motion.button>
         </div>
       </div>
 
