@@ -22,7 +22,7 @@ export default function HeroSection() {
           </p>
           <div className="mt-7">
             <Link
-              href=""
+              href="/books"
               className="bg-purple-500 text-white px-8  py-3 rounded-lg hover:bg-purple-600 transition"
             >
               See Collection

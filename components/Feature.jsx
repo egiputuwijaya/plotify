@@ -17,7 +17,7 @@ export default function FeatureYouGet() {
         </p>
       </div>
       <div className="flex flex-col md:flex-row md:gap-10 ">
-        <div className="flex-1 relative">
+        <div className="flex-1 relative overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export default function FeatureYouGet() {
             />
           </motion.div>
         </div>
-        <div className="flex-1 pt-70 md:pt-0">
+        <div className="flex-1 pt-70 md:pt-0 overflow-hidden">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -55,10 +55,13 @@ export default function FeatureYouGet() {
           >
             What feature you'll get
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 30 }}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.6 }} className="text-black pt-2 text-center md:text-left hidden md:block">
+            transition={{ duration: 0.6 }}
+            className="text-black pt-2 text-center md:text-left hidden md:block"
+          >
             Our recommendations help you get the results you want, especially
             for you
           </motion.p>

@@ -1,4 +1,6 @@
 import * as motion from "motion/react-client";
+import Link from "next/link";
+
 export default function BookList() {
   const books = [
     { title: "Atomic Habits", cover: "cover1.png", author: "James Clear" },
@@ -107,7 +109,7 @@ export default function BookList() {
           className="mt-20"
         >
           <h2 className="text-center py-2  bg-purple-700 max-w-40 mx-auto rounded-xl hover:bg-white hover:text-purple-600 transition duration-150">
-            View More
+            <Link href="/books">View More</Link>
           </h2>
         </motion.div>
       </div>

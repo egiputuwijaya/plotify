@@ -28,13 +28,13 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className="flex flex-row gap-12 text-xl text-gray-500"
           >
-            <Link href="" className="hover:text-purple-500">
+            <Link href="/books" className="hover:text-purple-500">
               Books
             </Link>
-            <Link href="" className="hover:text-purple-500">
+            <Link href="/community" className="hover:text-purple-500">
               Community
             </Link>
-            <Link href="" className="hover:text-purple-500">
+            <Link href="/about" className="hover:text-purple-500">
               About
             </Link>
           </motion.div>
@@ -66,25 +66,25 @@ export default function Navbar() {
           {isOpen && (
             <div className="flex flex-col gap-1 pb-1 ">
               <Link
-                href=""
+                href="/books"
                 className="text-gray-500 hover:text-white hover:bg-purple-400 hover:font-semibold transition px-5"
               >
                 Books
               </Link>
               <Link
-                href=""
+                href="/community"
                 className="text-gray-500 hover:text-white hover:bg-purple-400 hover:font-semibold transition px-5"
               >
                 Community
               </Link>
               <Link
-                href=""
+                href="/about"
                 className="text-gray-500 hover:text-white hover:bg-purple-400 hover:font-semibold transition px-5"
               >
                 About
               </Link>
               <Link
-                href=""
+                href="/login"
                 className="text-gray-500 hover:text-white hover:bg-purple-400 hover:font-semibold transition px-5"
               >
                 Sign in
