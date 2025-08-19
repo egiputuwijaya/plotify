@@ -48,7 +48,7 @@ export default function UserReviews() {
   ];
 
   return (
-    <div className="bg-white px-3 md:px-30 md:pt-20 md:pb-20">
+    <div className="bg-white px-3 md:px-30 md:pt-20 pb-5 md:pb-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

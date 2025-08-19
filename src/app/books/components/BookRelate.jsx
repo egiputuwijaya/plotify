@@ -35,10 +35,10 @@ export default function BooksRelate() {
   const booksToDisplay = query.trim() ? result : randomBooks;
 
   return (
-    <div className="bg-gradient-to-b from-purple-100 to-orange-100 pt-0 pb-10 px-30">
+    <div className="bg-gradient-to-b from-purple-100 to-orange-100 pt-0 pb-10 px-5 md:px-30">
       <h1 className="text-black text-2xl font-semibold py-5">Relate Books</h1>
       {/* GRID BOOKS */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10">
         {booksToDisplay.map((book, index) => (
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -18,7 +18,7 @@ export default function MissionAbout() {
   ];
 
   return (
-    <div className="bg-gradient-to-l from-orange-100 to-white py-20 px-30">
+    <div className="bg-gradient-to-l from-orange-100 to-white py-20 md:px-30">
       {/* VISION */}
       <div className="flex flex-col items-center justify-center gap-5 px-6">
         <div className="flex flex-col md:flex-row gap-10 justify-center max-w-5xl space-y-6 px-3">
@@ -73,7 +73,7 @@ export default function MissionAbout() {
           transition={{ duration: 0.7 }}
           className="flex flex-col max-w-2xl space-y-6"
         >
-          <h1 className="text-5xl font-bold text-purple-700">Our Mission</h1>
+          <h1 className="text-5xl font-bold text-purple-700 mt-10">Our Mission</h1>
           <p className="text-gray-700 text-lg leading-relaxed text-justify max-w-2xl">
             At Plotify, our mission is to deliver relevant and honest book
             recommendations that truly resonate with each reader’s taste and

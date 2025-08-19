@@ -3,7 +3,7 @@ import * as motion from "motion/react-client";
 export default function HeroSectionAbout() {
   return (
     <div className="">
-      <div className="bg-gradient-to-r from-purple-100 to-white py-20 px-30">
+      <div className="bg-gradient-to-r from-purple-100 to-white py-20 md:px-30">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

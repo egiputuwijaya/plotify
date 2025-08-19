@@ -27,7 +27,7 @@ export default function BooksSections() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-orange-100 to-purple-100 pt-10 px-30">
+    <div className="bg-gradient-to-b from-orange-100 to-purple-100 pt-10 px-5 md:px-30">
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export default function BooksSections() {
         <p className="text-center text-gray-500">No book found</p>
       )}
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10">
         {result.map((book, index) => (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -79,11 +79,10 @@ export default function BooksSections() {
             viewport={{ once: false }}
             transition={{
               duration: 0.7,
-              e,
             }}
             key={index}
             onClick={() => handleSelectedBook(book)}
-            className="cursor-pointer  rounded-lg p-3 shadow hover:shadow-lg transition border-2 border-purple-200 bg-white"
+            className="cursor-pointer  rounded-lg px-1 md:p-3 shadow hover:shadow-lg transition border-2 border-purple-200 bg-white"
           >
             <div className="w-full h-80 flex items-center justify-center bg-gray-100 rounded">
               <img
